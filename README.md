@@ -25,4 +25,3 @@ git push -u origin master
 
 git remote add origin https://github.com/tomargit/blockchain-car-rental.git
 git push -u origin master
-"# blockchain-car-rental" 
