@@ -19,7 +19,7 @@ fetch command-line/
 git push command-line/
 # git init
 # git add .
-# git commit -m "First commit"
+# git commit -m "some changes"
 # git remote add origin https://github.com/tomargit/blockchain-car-rental.git
 # git remote -v
 # git push origin master
