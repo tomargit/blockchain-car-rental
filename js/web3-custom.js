@@ -1,9 +1,11 @@
- var Web3 = require('web3');
-    var web3 = new Web3();
-	var host = "http://localhost:8545";
+	var Web3 = require('web3');
+    web3 = new Web3();
+	var host = "http://127.0.0.1:8545";
     web3.setProvider(new web3.providers.HttpProvider(host));
+	
     var from = web3.eth.coinbase;
     web3.eth.defaultAccount = from;
+	
 
     /*window.onload = function () {
         var filter = web3.eth.namereg().Changed();
@@ -29,21 +31,17 @@
     };
 
     function onRegisterOwnerKeyUp() {
-        var name = document.getElementById('registerOwner').value;
-        var owner = web3.eth.namereg().owner(name)
-		return owner;
-        /*document.getElementById('currentAddress').innerText = web3.eth.namereg().addr(name);
-        if (owner !== '0x0000000000000000000000000000000000000000') {
-            if (owner === from) {
-                document.getElementById('nameAvailability').innerText = "This name is already owned by you " + owner;
-            } else {
-                document.getElementById('nameAvailability').innerText = "This name is not available. It's already registered by " + owner;
-            }
-            return;
-        }
-        document.getElementById('nameAvailability').innerText = "This name is available. You can register it.";*/
+        var name = document.getElementById('userName').value;
+        var data = {};
+		//var acct = web3.eth.accounts;
+		//console.log(web3.eth.namereg().reserve(name));
+		//var owner = web3.eth.namereg().owner(name)
+		//web3.eth.accounts.create();
+		web3.personal.newAccount(name);
+		
+		//return owner;
     };
-
+ 
     function onAddressKeyUp() {
         var address = document.getElementById('address').value;
         document.getElementById('nameOf').innerText = web3.eth.namereg().name(address);
@@ -55,12 +53,6 @@
     };
 	
 	function validateForm() {
-    if ($('#userName').val().trim() == "") {
-        alert("User Name must be filled out");
-    } else
-	{
-		onRegisterOwnerKeyUp();
+    	onRegisterOwnerKeyUp();
+		return false;
 	}
-	
-	return false;
-}

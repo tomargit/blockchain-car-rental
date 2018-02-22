@@ -41,15 +41,3 @@ $('.tab a').on('click', function (e) {
   $(target).fadeIn(600);
   
 });
-
-function validateForm() {
-    if ($('#userName').val().trim() == "") {
-        alert("User Name must be filled out");
-        return false;
-    } else
-	{
-		
-	}
-	
-	return false;
-}

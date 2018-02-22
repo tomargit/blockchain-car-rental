@@ -10,18 +10,21 @@ Project Blocakchain car rental development reposistory
 
 
 
-create a new repository on the command line
 
-echo "# blockchain-car-rental" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/tomargit/blockchain-car-rental.git
-git push -u origin master
+fetch command-line/
+# git clone https://github.com/tomargit/blockchain-car-rental.git
+# git fetch remotename
 
 
+git push command-line/
+# git init
+# git add .
+# git commit -m "First commit"
+# git remote add origin https://github.com/tomargit/blockchain-car-rental.git
+# git remote -v
+# git push origin master
 
- push an existing repository from the command line
 
-git remote add origin https://github.com/tomargit/blockchain-car-rental.git
-git push -u origin master
+
+
+
